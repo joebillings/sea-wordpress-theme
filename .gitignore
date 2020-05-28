@@ -1,0 +1,69 @@
+# Ignore everything #
+**
+!wp-content/
+wp-content/**
+!wp-content/themes/
+!wp-content/plugins/
+wp-content/themes/**
+wp-content/plugins/**
+
+# Add two rules for each Theme or Plugin you want to include:
+# 1. !folder-name/    <-- includes the Plugin and top level files
+# 2. !folder-name/**  <-- includes the Plugin and sub level files recursively, except for the "Ignore some other system generated files" rules below
+###############################
+
+# Start editing!
+
+# Theme
+!wp-content/themes/moving-medicine-2020
+!wp-content/themes/moving-medicine-2020/**
+
+# Functionality Plugin
+!wp-content/plugins/core-functionality/
+!wp-content/plugins/core-functionality/**
+
+
+# Stop editing!
+
+############################################
+# Ignore some other system generated files #
+############################################
+*.mp4
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.log
+*.sql
+*.sqlite
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.codekit-cache
+.sass-cache
+node_modules
+build
+# Sublime
+*.sublime-project
+*.sublime-workspace
+# PhpStorm
+.idea/
+
+# Always include the build script #
+###################################
+!build.sh
+!README.md
+!CHANGELOG.md
+!.gitignore
