@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#removing temp if there was one
+rm -rf temp
+
+#recreating temp folder
+mkdir temp
+
+#pulling code from git
+git clone https://oneltddeveloper@bitbucket.org/onedevras/$2.git temp
+
+#moving it in the theme
+mv temp/* wp-content/themes/$1/
+
+#clearing up
+rm -rf temp
+
+echo "Done"

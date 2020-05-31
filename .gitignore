@@ -14,9 +14,12 @@ wp-content/plugins/**
 
 # Start editing!
 
-# Theme
-!wp-content/themes/moving-medicine-2020
-!wp-content/themes/moving-medicine-2020/**
+# Themes
+!wp-content/themes/oneltd-base
+!wp-content/themes/oneltd-base/**
+
+!wp-content/themes/solidarity-economony
+!wp-content/themes/solidarity-economony/**
 
 # Functionality Plugin
 !wp-content/plugins/core-functionality/

@@ -1,0 +1,36 @@
+// Colors
+// format: $sitename-color, eg $onebase-red = #FF0000l
+
+
+// Base
+$black: #414141;
+$white: #FFF;
+$grey: #989898;
+$lightgrey: #e9e9e9;
+
+$teal: #0bb696;
+
+// Fonts
+$heading-font: 'Lato', sans-serif;
+$body-font: 'Merriweather', serif;
+
+
+// Measurements
+$container-full: 1170px;
+$container-tablet-landscape: 920px;
+$container-tablet-portrait: 768px;
+$container-mobile: 650px;
+
+$base: 8px;
+
+// Responsive
+$breakpoints: (
+	"phone":        400px,
+	"phone-wide":   480px,
+	"phablet":      560px,
+	"tablet-small": 640px,
+	"tablet":       768px,
+	"tablet-wide":  1024px,
+	"desktop":      1248px,
+	"desktop-wide": 1440px
+);

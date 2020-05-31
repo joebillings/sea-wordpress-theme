@@ -1,0 +1,15 @@
+.editor-styles-wrapper {
+
+  h1, h2, h3, h4 {
+    font-family: $heading-font;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1 !important;
+    letter-spacing: 0.1rem;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+
+}

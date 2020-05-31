@@ -1,0 +1,200 @@
+@mixin for-size($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+      @if $type == max {
+          $width: $width - 1px;
+      }
+      @media only screen and (#{$type}-width: $width) {
+          @content;
+      }
+  }
+  @else if type_of($width) == "number" {
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+        @content;
+    }
+  }
+}
+
+@mixin hamburger-anchor($color: $black, $background: transparent) {
+  display: flex;
+  width: 40px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color;
+  background: $background;
+  padding-bottom: 3px;
+}
+
+@mixin hamburger-line($color) {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: $color;
+}
+
+@mixin hamburger-css($color: $black, $background: transparent, $border-width: 2px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
+  border: $border-width solid $color;
+  background: $background;
+  
+  .hamburger-icon {
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 22px;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+
+    .hamburger-lines,
+    &:after {
+      @include hamburger-line($color);
+    }
+  }
+
+  .hamburger-lines {
+    left: 0;
+    text-indent: 2000px;
+    font-size: 0;
+    top: calc(36% + 2px);
+    transition: right .3s ease-in-out;
+    width: 100%;
+
+    &:before,
+    &:after {
+      @include hamburger-line($color);
+      position: absolute;
+      transition: all .3s ease-in-out;
+      width: 100%;
+      z-index: 10;
+    }
+
+    &:before {
+      top: -6px;
+
+      
+    }
+
+    &:after {
+      top: 6px;
+
+      .active & {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.active .hamburger-lines,
+  &.active .hamburger-icon:after {
+    background: transparent;
+  }
+
+  &.active .hamburger-lines:before,
+  &.active .hamburger-lines:after {
+    top: 0;
+  }
+
+  &.active .hamburger-lines:before {
+    transform: rotate(45deg);
+  }
+
+  &.active .hamburger-lines:after {
+    transform: rotate(-45deg);
+  }
+}
+  
+  @mixin image_bg($size: cover) {
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-position: center center; 
+  }
+  
+  @mixin grid {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; // Mobile
+  
+    @include for-size(phablet) {
+      padding: 0 30px;
+    }
+
+    @include for-size(tablet) {
+      width: $container-tablet-portrait;
+    }
+  
+    @include for-size(tablet-wide) {
+      width: $container-tablet-landscape;
+    }
+  
+    @include for-size(desktop) {
+      padding: 0;
+      width: $container-full;
+    }
+  }
+  
+  @mixin narrowgrid($percent) {
+    width: 90%;
+    margin: 0 auto;
+  
+    @include for-size(tablet-portrait) {
+      width: $container_tablet_portrait * $percent;
+    }
+  
+    @include for-size(tablet-landscape) {
+      width: $container_tablet_landscape * $percent;
+    }
+  
+    @include for-size(full-size) {
+      padding: 0;
+      width: $container_full * $percent;
+    }
+  }
+  
+  @mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
+  }
+  
+  @mixin uppercase {
+    text-transform: uppercase;
+  }
+  
+  @mixin transition($duration: 0.6s) {
+    transition: all $duration cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+  }
+  
+  @mixin fill-parent() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @mixin hardware($backface: true, $perspective: 1000) {
+    @if $backface {
+      backface-visibility: hidden;
+    }
+    perspective: $perspective;
+  }

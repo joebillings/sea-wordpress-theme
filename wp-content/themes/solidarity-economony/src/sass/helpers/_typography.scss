@@ -1,0 +1,85 @@
+body {
+  font-family: $body-font;
+  color: $black;
+  // -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+
+  @include for-size(phablet) {
+    font-size: 18px;
+  }
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 16px;
+  
+  &:last-child { 
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+
+  strong {
+    font-weight: 900;
+  }
+}
+
+h1 {
+  font-size: 26px;
+
+  @include for-size(phablet) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+
+}
+
+a {
+  color: $teal;
+
+  &:visited,
+  &:hover,
+  &:active {
+    color: darken($teal, 5%);
+  }
+}
+
+ul,
+ol {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 1em 0px 1em 1.1em;
+
+  li {
+    margin: .3em 0;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+.no-space {
+  margin-bottom: 0;
+}
+
+.low-space {
+  margin-bottom: $base / 2;
+}
+
+.mid-space {
+  margin-bottom: $base;
+}

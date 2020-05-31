@@ -1,0 +1,677 @@
+/**
+ * Theme Name: Solidarity Economy
+ * Author: <a href="http://oneltd.co.uk/">One</a>
+ * Author URI: http://oneltd.co.uk/
+ * Version: 1.0
+ * Description: 
+ * Template: oneltd-base
+ */
+
+/* line 1, ../../src/sass/helpers/_reset.scss */
+html {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 5, ../../src/sass/helpers/_reset.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* line 11, ../../src/sass/helpers/_reset.scss */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 99, ../../src/sass/helpers/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* line 112, ../../src/sass/helpers/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 115, ../../src/sass/helpers/_reset.scss */
+ol,
+ul {
+  list-style: none;
+}
+
+/* line 119, ../../src/sass/helpers/_reset.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 123, ../../src/sass/helpers/_reset.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* line 130, ../../src/sass/helpers/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 135, ../../src/sass/helpers/_reset.scss */
+html {
+  -webkit-transition: all 0.4s ease;
+     -moz-transition: all 0.4s ease;
+       -o-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+}
+/* line 138, ../../src/sass/helpers/_reset.scss */
+html.wf-loading {
+  opacity: 0;
+}
+/* line 142, ../../src/sass/helpers/_reset.scss */
+html.wf-active, html.wf-inactive {
+  opacity: 1;
+}
+
+/* line 1, ../../src/sass/helpers/_typography.scss */
+body {
+  font-family: "Merriweather", serif;
+  color: #414141;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+@media only screen and (min-width: 560px) {
+  /* line 1, ../../src/sass/helpers/_typography.scss */
+  body {
+    font-size: 18px;
+  }
+}
+
+/* line 14, ../../src/sass/helpers/_typography.scss */
+h1, h2, h3, h4, p {
+  margin-bottom: 16px;
+}
+/* line 17, ../../src/sass/helpers/_typography.scss */
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 22, ../../src/sass/helpers/_typography.scss */
+h1, h2, h3, h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+/* line 29, ../../src/sass/helpers/_typography.scss */
+h1 strong, h2 strong, h3 strong, h4 strong {
+  font-weight: 900;
+}
+
+/* line 34, ../../src/sass/helpers/_typography.scss */
+h1 {
+  font-size: 26px;
+}
+@media only screen and (min-width: 560px) {
+  /* line 34, ../../src/sass/helpers/_typography.scss */
+  h1 {
+    font-size: 32px;
+  }
+}
+
+/* line 42, ../../src/sass/helpers/_typography.scss */
+h2 {
+  font-size: 24px;
+}
+
+/* line 50, ../../src/sass/helpers/_typography.scss */
+a {
+  color: #0bb696;
+}
+/* line 53, ../../src/sass/helpers/_typography.scss */
+a:visited, a:hover, a:active {
+  color: #0a9e82;
+}
+
+/* line 60, ../../src/sass/helpers/_typography.scss */
+ul,
+ol {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 1em 0px 1em 1.1em;
+}
+/* line 66, ../../src/sass/helpers/_typography.scss */
+ul li,
+ol li {
+  margin: .3em 0;
+}
+
+/* line 71, ../../src/sass/helpers/_typography.scss */
+ol {
+  list-style-type: decimal;
+}
+
+/* line 75, ../../src/sass/helpers/_typography.scss */
+.no-space {
+  margin-bottom: 0;
+}
+
+/* line 79, ../../src/sass/helpers/_typography.scss */
+.low-space {
+  margin-bottom: 4px;
+}
+
+/* line 83, ../../src/sass/helpers/_typography.scss */
+.mid-space {
+  margin-bottom: 8px;
+}
+
+/* line 1, ../../src/sass/helpers/_base.scss */
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+@media only screen and (min-width: 560px) {
+  /* line 1, ../../src/sass/helpers/_base.scss */
+  .container {
+    padding: 0 30px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 1, ../../src/sass/helpers/_base.scss */
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* line 1, ../../src/sass/helpers/_base.scss */
+  .container {
+    width: 920px;
+  }
+}
+@media only screen and (min-width: 1248px) {
+  /* line 1, ../../src/sass/helpers/_base.scss */
+  .container {
+    padding: 0;
+    width: 1170px;
+  }
+}
+
+/* line 5, ../../src/sass/helpers/_base.scss */
+.page-inner {
+  padding: 56px 0;
+}
+
+/* line 9, ../../src/sass/helpers/_base.scss */
+.site-header-inner,
+.site-footer-inner {
+  max-width: 95%;
+  margin: auto;
+}
+
+/* line 15, ../../src/sass/helpers/_base.scss */
+hr.wp-block-separator {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 56px 0;
+  border: 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* line 25, ../../src/sass/helpers/_base.scss */
+.wp-block-group.has-background {
+  padding: 32px;
+  border: 1px solid #dfdfdf;
+}
+
+/* line 30, ../../src/sass/helpers/_base.scss */
+.wp-block-buttons {
+  margin-top: 56px;
+}
+
+/* line 34, ../../src/sass/helpers/_base.scss */
+.wp-block-button__link,
+.wp-block-file__button {
+  background-color: #0bb696;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+     -moz-transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+       -o-transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+          transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+/* line 42, ../../src/sass/helpers/_base.scss */
+.wp-block-button__link:hover,
+.wp-block-file__button:hover {
+  background-color: #414141;
+}
+
+/* line 1, ../../src/sass/partials/header.scss */
+header.site-header {
+  font-family: "Lato", sans-serif;
+  border-bottom: solid #e9e9e9 2px;
+}
+
+/* line 6, ../../src/sass/partials/header.scss */
+.site-header-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 12, ../../src/sass/partials/header.scss */
+h1.title {
+  margin: 16px 0 4px;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  /* line 12, ../../src/sass/partials/header.scss */
+  h1.title {
+    font-size: 28px;
+  }
+}
+/* line 21, ../../src/sass/partials/header.scss */
+h1.title a {
+  color: #414141;
+  text-decoration: none;
+}
+
+/* line 27, ../../src/sass/partials/header.scss */
+.logo {
+  max-width: 300px;
+}
+
+/* line 31, ../../src/sass/partials/header.scss */
+p.tagline {
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px) {
+  /* line 31, ../../src/sass/partials/header.scss */
+  p.tagline {
+    font-size: 18px;
+  }
+}
+
+/* line 43, ../../src/sass/partials/header.scss */
+.main-nav {
+  display: none;
+  font-weight: 400;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 43, ../../src/sass/partials/header.scss */
+  .main-nav {
+    display: block;
+  }
+}
+/* line 51, ../../src/sass/partials/header.scss */
+.main-nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 56, ../../src/sass/partials/header.scss */
+.main-nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 16px;
+  color: #414141;
+  font-size: 15px;
+  line-height: 1.5;
+}
+/* line 64, ../../src/sass/partials/header.scss */
+.main-nav a:hover {
+  color: #FFF;
+  background: #414141;
+}
+
+/* line 71, ../../src/sass/partials/header.scss */
+.hamburger {
+  position: relative;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  margin: 0;
+  margin-left: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 34px;
+  cursor: pointer;
+  border: 0 solid #414141;
+  background: transparent;
+}
+/* line 50, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-icon {
+  position: relative;
+  display: block;
+  height: 22px;
+  width: 22px;
+  opacity: 1;
+  -webkit-transition: opacity .3s ease-in-out;
+     -moz-transition: opacity .3s ease-in-out;
+       -o-transition: opacity .3s ease-in-out;
+          transition: opacity .3s ease-in-out;
+}
+/* line 58, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-icon .hamburger-lines, .hamburger .hamburger-icon:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #414141;
+}
+/* line 64, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-lines {
+  left: 0;
+  text-indent: 2000px;
+  font-size: 0;
+  top: -webkit-calc(36% + 2px);
+  top: -moz-calc(36% + 2px);
+  top: calc(36% + 2px);
+  -webkit-transition: right .3s ease-in-out;
+     -moz-transition: right .3s ease-in-out;
+       -o-transition: right .3s ease-in-out;
+          transition: right .3s ease-in-out;
+  width: 100%;
+}
+/* line 72, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-lines:before, .hamburger .hamburger-lines:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: #414141;
+  position: absolute;
+  -webkit-transition: all .3s ease-in-out;
+     -moz-transition: all .3s ease-in-out;
+       -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+  width: 100%;
+  z-index: 10;
+}
+/* line 81, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-lines:before {
+  top: -6px;
+}
+/* line 87, ../../src/sass/helpers/_mixins.scss */
+.hamburger .hamburger-lines:after {
+  top: 6px;
+}
+/* line 90, ../../src/sass/helpers/_mixins.scss */
+.active .hamburger .hamburger-lines:after {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/* line 96, ../../src/sass/helpers/_mixins.scss */
+.hamburger.active .hamburger-lines, .hamburger.active .hamburger-icon:after {
+  background: transparent;
+}
+/* line 101, ../../src/sass/helpers/_mixins.scss */
+.hamburger.active .hamburger-lines:before, .hamburger.active .hamburger-lines:after {
+  top: 0;
+}
+/* line 106, ../../src/sass/helpers/_mixins.scss */
+.hamburger.active .hamburger-lines:before {
+  -webkit-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/* line 110, ../../src/sass/helpers/_mixins.scss */
+.hamburger.active .hamburger-lines:after {
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/* line 79, ../../src/sass/partials/header.scss */
+.hamburger:hover {
+  opacity: .6;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 71, ../../src/sass/partials/header.scss */
+  .hamburger {
+    display: none;
+  }
+}
+
+/* line 1, ../../src/sass/partials/footer.scss */
+footer.site-footer {
+  background: #0bb696;
+  padding: 40px 0;
+  font-family: "Lato", sans-serif;
+}
+
+/* line 7, ../../src/sass/partials/footer.scss */
+.site-footer-inner {
+  color: #FFF;
+  font-weight: 700;
+  text-align: center;
+}
+/* line 12, ../../src/sass/partials/footer.scss */
+.site-footer-inner .footer-right {
+  margin-top: 16px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 7, ../../src/sass/partials/footer.scss */
+  .site-footer-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+       -moz-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: left;
+  }
+  /* line 22, ../../src/sass/partials/footer.scss */
+  .site-footer-inner .footer-right {
+    text-align: right;
+    -webkit-flex-basis: 45%;
+        -ms-flex-preferred-size: 45%;
+            flex-basis: 45%;
+    margin-top: 0;
+  }
+}
+
+/* line 30, ../../src/sass/partials/footer.scss */
+.socials {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 8px;
+}
+@media only screen and (min-width: 768px) {
+  /* line 30, ../../src/sass/partials/footer.scss */
+  .socials {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+/* line 39, ../../src/sass/partials/footer.scss */
+.socials i {
+  color: #FFF;
+  font-size: 30px;
+  margin: 0 8px 8px 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+     -moz-transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+       -o-transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+          transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* line 45, ../../src/sass/partials/footer.scss */
+.socials i:hover {
+  opacity: .9;
+}
+/* DO NOT EDIT THIS FILE! */
+/* to make changes, create a file called hacks.css and put them in there */
+/* DO NOT EDIT THIS FILE! */

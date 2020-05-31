@@ -1,0 +1,87 @@
+header.site-header {
+  font-family: $heading-font;
+  border-bottom: solid $lightgrey 2px;
+}
+
+.site-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1.title {
+  margin: #{$base * 2} 0 #{$base / 2};
+  font-size: 21px;
+  text-transform: uppercase;
+
+  @include for-size(tablet) {
+    font-size: 28px;
+  }
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.logo {
+  max-width: 300px;
+}
+
+p.tagline {
+  
+  font-size: 15px;
+  line-height: 1.2;
+  margin-bottom: #{$base * 2};
+  font-weight: 400;
+
+  @include for-size(tablet) {
+    font-size: 18px;
+  }
+}
+
+.main-nav {
+  display: none;
+  font-weight: 400;
+
+  @include for-size(tablet-wide) {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 12px 16px;
+    color: $black;
+    font-size: 15px;
+    line-height: 1.5;
+
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+  }
+}
+
+.hamburger {
+  position: relative;
+  align-self: center;
+  margin: 0;
+  margin-left: 24px;
+
+  @include hamburger-css($color: $black, $border-width: 0);
+
+  &:hover {
+    opacity: .6;
+  }
+
+  @include for-size(tablet-wide) {
+    display: none;
+  }
+
+}

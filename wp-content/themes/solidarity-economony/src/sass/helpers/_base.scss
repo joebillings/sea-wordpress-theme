@@ -1,0 +1,45 @@
+.container {
+  @include grid;
+}
+
+.page-inner {
+  padding: #{$base * 7} 0;
+}
+
+.site-header-inner,
+.site-footer-inner {
+  max-width: 95%;
+  margin: auto;
+}
+
+hr.wp-block-separator {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: #{$base * 7} 0;
+  border: 0;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.wp-block-group.has-background {
+  padding: $base * 4;
+  border: 1px solid darken($lightgrey, 4%);
+}
+
+.wp-block-buttons {
+  margin-top: $base * 7;
+}
+
+.wp-block-button__link,
+.wp-block-file__button {
+  background-color: $teal;
+  border-radius: 3px;
+  @include transition(.3s);
+  font-family: $heading-font;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $black;
+  }
+}

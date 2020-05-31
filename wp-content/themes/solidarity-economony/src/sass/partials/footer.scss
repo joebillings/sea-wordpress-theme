@@ -1,0 +1,49 @@
+footer.site-footer {
+  background: $teal;
+  padding: 40px 0;
+  font-family: $heading-font;
+}
+
+.site-footer-inner {
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+
+  .footer-right {
+    margin-top: 16px;
+  }
+  
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: left;
+
+    .footer-right {
+      text-align: right;
+      flex-basis: 45%;
+      margin-top: 0;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+
+  @include for-size(tablet) {
+    justify-content: flex-start;
+  }
+
+  i {
+    color: $white;
+    font-size: 30px;
+    margin: 0 8px 8px 0;
+    @include transition;
+    
+    &:hover {
+      opacity: .9;
+    }
+  }
+}

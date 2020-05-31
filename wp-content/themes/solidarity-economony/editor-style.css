@@ -1,0 +1,21 @@
+/* line 5, ../../src/sass/editor/_e-buttons.scss */
+.wp-block-button__link,
+.wp-block-file__button {
+  background-color: #0bb696;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+/* line 3, ../../src/sass/editor/_e-typography.scss */
+.editor-styles-wrapper h1, .editor-styles-wrapper h2, .editor-styles-wrapper h3, .editor-styles-wrapper h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1 !important;
+  letter-spacing: 0.1rem;
+}
+/* line 10, ../../src/sass/editor/_e-typography.scss */
+.editor-styles-wrapper h1 strong, .editor-styles-wrapper h2 strong, .editor-styles-wrapper h3 strong, .editor-styles-wrapper h4 strong {
+  font-weight: 900;
+}
