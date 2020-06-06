@@ -10,8 +10,12 @@
             <?php endwhile; ?>
           </div>
           <?php endif; ?>
-          <p class="no-space"><?= the_field('telephone_number', 'options'); ?></p>
-          <p class="no-space"><?= the_field('email_address', 'options'); ?></p>
+          <?php if(get_field('telephone_number', 'options')): ?>
+            <p class="no-space"><?= the_field('telephone_number', 'options'); ?></p>
+          <?php endif; ?>
+          <?php if(get_field('email_address', 'options')): ?>
+            <p class="no-space"><a href="<?= the_field('email_address', 'options'); ?>"><?= the_field('email_address', 'options'); ?></a></p>
+          <?php endif; ?>
           <?= the_field('address', 'options'); ?>
         </div>
         <div class="footer-right">

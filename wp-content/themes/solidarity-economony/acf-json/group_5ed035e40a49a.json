@@ -1,0 +1,62 @@
+{
+    "key": "group_5ed035e40a49a",
+    "title": "Site options",
+    "fields": [
+        {
+            "key": "field_5ed035e86e543",
+            "label": "Case studies name",
+            "name": "case_studies_name",
+            "type": "text",
+            "instructions": "The title to use in place of case studies, e.g. Stories.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ed210a15152d",
+            "label": "Font Awesome Kit",
+            "name": "font_awesome_kit",
+            "type": "text",
+            "instructions": "Go to <a href=\"https:\/\/fontawesome.com\/start\" target=\"_blank\">Font Awesome<\/a> and follow the instructions to create an account. Once set up, paste the 10-14 digit code in this field.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1591435130
+}

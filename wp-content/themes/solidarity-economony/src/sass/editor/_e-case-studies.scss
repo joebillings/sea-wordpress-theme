@@ -1,0 +1,114 @@
+// Listing
+.case-studies-listing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 48px;
+
+  @include for-size(tablet-small) {
+    margin-right: -4%;
+  }
+
+  @include for-size(tablet-wide) {
+    margin-right: -3%;
+  }
+}
+
+.section.case-study-teaser {
+  flex-basis: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  margin-bottom: 48px;
+
+  @include for-size(tablet-small) {
+    flex-basis: 46%;
+    margin: 0 4% 48px 0;
+  }
+
+  @include for-size(tablet-wide) {
+    flex-basis: 30%;
+    margin-right: 3%;
+  }
+
+  .quote {
+    font-style: italic;
+    font-weight: 400;
+
+    &:before {
+      content: "\201C";
+    }
+
+    &:after {
+      content: "\201D";
+    }
+  
+  }
+}
+
+.case-study-teaser-link {
+  width: 100%;
+  background-color: $teal;
+  border-radius: 0 99rem 99rem;
+  align-self: flex-end;
+  position: relative;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: $pink;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.case-study-teaser-image {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+  border-radius: 99em;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
+
+// Single
+
+.case-study {
+  
+  @include for-size(tablet-wide) {
+    display: flex;
+  }
+
+  .section {
+    padding: 0 #{$base * 2};
+  }
+
+  .heading {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-size(tablet-wide) {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: right;
+  }
+
+  .content {
+    flex-basis: 80%;
+  }
+}

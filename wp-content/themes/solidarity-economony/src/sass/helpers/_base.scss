@@ -12,6 +12,12 @@
   margin: auto;
 }
 
+.img-responsive {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 hr.wp-block-separator {
   width: 100vw;
   position: relative;
@@ -42,4 +48,8 @@ hr.wp-block-separator {
   &:hover {
     background-color: $black;
   }
+}
+
+figcaption {
+  text-align: right;
 }

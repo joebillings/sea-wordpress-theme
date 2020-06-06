@@ -1,6 +1,9 @@
 // Base
 @import "helpers/variables";
+@import "helpers/mixins";
 
 // Editor styles
 @import "editor/e-buttons";
 @import "editor/e-typography";
+@import "editor/e-case-studies";
+@import "editor/e-map";

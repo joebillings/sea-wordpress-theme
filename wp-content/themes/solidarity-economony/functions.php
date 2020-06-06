@@ -3,6 +3,10 @@
 // template tags used to get content
 include('inc/template-tags.php');
 
+// add_editor_style('editor-style.css');
+// add_theme_support('editor-styles');
+add_theme_support('responsive-embeds');
+
 // Register the navigation menus
 function sea_register_nav_menu()
 {
@@ -36,8 +40,9 @@ function get_svg($slug)
 }
 
 /* Register Options Page */
-function sea_setup_options() {
-  if(function_exists('acf_add_options_page')):
+function sea_setup_options()
+{
+  if (function_exists('acf_add_options_page')) :
     acf_add_options_page(array(
       'page_title'  => 'Options',
       'menu_title'  => 'Options',
@@ -47,59 +52,93 @@ function sea_setup_options() {
     ));
   endif;
 
-  if(function_exists('acf_add_options_sub_page')):
+  if (function_exists('acf_add_options_sub_page')) :
     acf_add_options_sub_page(array(
-        'title' => 'Header Options',
-        'parent' => 'options',
-        'capability' => 'manage_options'
-    ));
-  endif;
-  
-  if(function_exists('acf_add_options_sub_page')):
-    acf_add_options_sub_page(array(
-        'title' => 'Site Options',
-        'parent' => 'options',
-        'capability' => 'manage_options'
+      'title' => 'Header Options',
+      'parent' => 'options',
+      'capability' => 'manage_options'
     ));
   endif;
 
-  if(function_exists('acf_add_options_sub_page')):
+  if (function_exists('acf_add_options_sub_page')) :
     acf_add_options_sub_page(array(
-        'title' => 'Footer Options',
-        'parent' => 'options',
-        'capability' => 'manage_options'
+      'title' => 'Site Options',
+      'parent' => 'options',
+      'capability' => 'manage_options'
+    ));
+  endif;
+
+  if (function_exists('acf_add_options_sub_page')) :
+    acf_add_options_sub_page(array(
+      'title' => 'Footer Options',
+      'parent' => 'options',
+      'capability' => 'manage_options'
     ));
   endif;
 }
 add_action('init', 'sea_setup_options');
 
-function sea_add_site_url_to_instructions( $field ) {
+// Adds the correct tld to acf instructions
+function sea_add_site_url_to_instructions($field)
+{
   // Set the site url in the instructions
-	if ( $field['name'] == 'icon' ) {
-    // _one_log($field['instructions']);
+  if ($field['name'] == 'icon') {
     $field['instructions'] = str_replace('{{site_url}}', get_site_url(), $field['instructions']);
-		return $field;
+    return $field;
   }
-  
+
   return $field;
 }
 add_filter('acf/load_field', 'sea_add_site_url_to_instructions', 20);
 
-// Blocks defaults
+// Blocks
 
-function custom_block_styles() {
-	wp_enqueue_style( 'custom-block-styles', get_theme_file_uri( 'editor-style.css' ) );
+// ACF blocks
+function sea_register_blocks()
+{
+
+  if (!function_exists('acf_register_block_type'))
+    return;
+
+  acf_register_block_type(array(
+    'name'      => 'sea-map',
+    'title'     => __('SEA Map'),
+    'render_template' => 'inc/blocks/map.php',
+    'category'    => 'widgets',
+    'icon'      => 'location',
+    'mode'      => 'auto',
+    'keywords'    => array(),
+    'post_types' => array()
+  ));
+
+  acf_register_block_type(array(
+    'name'      => 'case-studies-links',
+    'title'     => __('Case Studies Links'),
+    'render_template' => 'inc/blocks/case-studies-links.php',
+    'category'    => 'widgets',
+    'icon'      => 'welcome-widgets-menus',
+    'mode'      => 'auto',
+    'keywords'    => array(),
+    'post_types' => array()
+  ));
 }
-add_action( 'enqueue_block_editor_assets', 'custom_block_styles', 2);
+add_action('acf/init', 'sea_register_blocks');
+
+function custom_block_styles()
+{
+  wp_enqueue_style('custom-block-styles', get_theme_file_uri('editor-style.css'));
+}
+add_action('enqueue_block_editor_assets', 'custom_block_styles', 2);
 
 /**
  * Gutenberg scripts and styles
  * @link https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg
  */
-function be_gutenberg_scripts() {
-	wp_enqueue_script( 'be-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
+function be_gutenberg_scripts()
+{
+  wp_enqueue_script('be-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array('wp-blocks', 'wp-dom'), filemtime(get_stylesheet_directory() . '/assets/js/editor.js'), true);
 }
-add_action( 'enqueue_block_editor_assets', 'be_gutenberg_scripts' );
+add_action('enqueue_block_editor_assets', 'be_gutenberg_scripts');
 
 // Enqueue Extra Styles
 function sea_enqueue_styles()
@@ -111,7 +150,7 @@ add_action('oneltd_enqueue_styles', 'sea_enqueue_styles');
 // Enqueue extra scripts
 function sea_enqueue_scripts()
 {
-  if(get_field('font_awesome_kit', 'options')) {
+  if (get_field('font_awesome_kit', 'options')) {
     wp_register_script('fa', 'https://kit.fontawesome.com/' . get_field('font_awesome_kit', 'options') . '.js', array(), NULL, false);
     wp_enqueue_script('fa');
   }

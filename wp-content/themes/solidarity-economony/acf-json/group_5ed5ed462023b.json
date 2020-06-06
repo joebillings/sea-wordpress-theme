@@ -1,0 +1,43 @@
+{
+    "key": "group_5ed5ed462023b",
+    "title": "Settings for this Case Study",
+    "fields": [
+        {
+            "key": "field_5ed5ed5259603",
+            "label": "Quote",
+            "name": "quote",
+            "type": "textarea",
+            "instructions": "Enter up to 4 lines of text for best results.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case_study"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1591435125
+}

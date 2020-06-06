@@ -2,6 +2,15 @@ footer.site-footer {
   background: $teal;
   padding: 40px 0;
   font-family: $heading-font;
+  font-size: 15px;
+
+  a {
+    color: $white;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
 }
 
 .site-footer-inner {
@@ -43,7 +52,7 @@ footer.site-footer {
     @include transition;
     
     &:hover {
-      opacity: .9;
+      opacity: .7;
     }
   }
 }
