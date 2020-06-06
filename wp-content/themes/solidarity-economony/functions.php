@@ -2,6 +2,7 @@
 
 // template tags used to get content
 include('inc/template-tags.php');
+include('inc/cpt.php');
 
 // add_editor_style('editor-style.css');
 // add_theme_support('editor-styles');
