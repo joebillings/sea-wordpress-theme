@@ -3,6 +3,22 @@
     "title": "Map Settings",
     "fields": [
         {
+            "key": "field_5edcce29ae131",
+            "label": "Map URL",
+            "name": "map_url",
+            "type": "url",
+            "instructions": "The URL of the map to use in the iframe (this will probably change when the map can be built by the theme).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5edb3a60a4885",
             "label": "Height",
             "name": "height",
@@ -41,5 +57,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591435115
+    "modified": 1591529052
 }
