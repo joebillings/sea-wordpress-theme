@@ -128,7 +128,6 @@
 /* line 50, ../../src/sass/editor/_e-case-studies.scss */
 .case-study-teaser-link {
   width: 100%;
-  background-color: #0bb696;
   -webkit-border-radius: 0 99rem 99rem;
      -moz-border-radius: 0 99rem 99rem;
           border-radius: 0 99rem 99rem;
@@ -141,18 +140,18 @@
        -o-transition: background-color 0.25s;
           transition: background-color 0.25s;
 }
-/* line 58, ../../src/sass/editor/_e-case-studies.scss */
+/* line 57, ../../src/sass/editor/_e-case-studies.scss */
 .case-study-teaser-link:hover {
   background-color: #d90368;
 }
-/* line 62, ../../src/sass/editor/_e-case-studies.scss */
+/* line 61, ../../src/sass/editor/_e-case-studies.scss */
 .case-study-teaser-link:after {
   content: "";
   display: block;
   padding-bottom: 100%;
 }
 
-/* line 69, ../../src/sass/editor/_e-case-studies.scss */
+/* line 68, ../../src/sass/editor/_e-case-studies.scss */
 .case-study-teaser-image {
   position: absolute;
   width: 90%;
@@ -169,7 +168,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  /* line 85, ../../src/sass/editor/_e-case-studies.scss */
+  /* line 84, ../../src/sass/editor/_e-case-studies.scss */
   .case-study {
     display: -webkit-box;
     display: -webkit-flex;
@@ -178,11 +177,11 @@
     display: flex;
   }
 }
-/* line 91, ../../src/sass/editor/_e-case-studies.scss */
+/* line 90, ../../src/sass/editor/_e-case-studies.scss */
 .case-study .section {
   padding: 0 16px;
 }
-/* line 95, ../../src/sass/editor/_e-case-studies.scss */
+/* line 94, ../../src/sass/editor/_e-case-studies.scss */
 .case-study .heading {
   text-align: left;
   display: -webkit-box;
@@ -197,18 +196,18 @@
           justify-content: space-between;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 95, ../../src/sass/editor/_e-case-studies.scss */
+  /* line 94, ../../src/sass/editor/_e-case-studies.scss */
   .case-study .heading {
     display: block;
     text-align: right;
   }
 }
-/* line 106, ../../src/sass/editor/_e-case-studies.scss */
+/* line 105, ../../src/sass/editor/_e-case-studies.scss */
 .case-study h2 {
   font-size: 28px;
   text-align: right;
 }
-/* line 111, ../../src/sass/editor/_e-case-studies.scss */
+/* line 110, ../../src/sass/editor/_e-case-studies.scss */
 .case-study .content {
   -webkit-flex-basis: 80%;
       -ms-flex-preferred-size: 80%;

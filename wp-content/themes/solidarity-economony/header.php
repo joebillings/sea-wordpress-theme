@@ -15,15 +15,11 @@
           <div class="logo-container">
           <?php endif; ?>
             <h1 class="title">
-              <a href="<?php bloginfo('url'); ?>">
+              <a class="nav-brand" href="<?php bloginfo('url'); ?>"><span id="nav-brand-image-wrap">
               <?php 
-                $logo = get_field('logo', 'options');
-                $blog_name = get_bloginfo('name');
-                if( $logo ): ?>
-                  <img class="logo" src="<?= $logo['url'] ?>" alt="<?= $blog_name ?>">
-                <?php else:
-                  echo $blog_name;
-                endif; ?>
+                $blog_name = get_bloginfo('name'); ?>
+                <?php sea_add_brand_image() ?></span>
+                <span class="site-name <?= get_theme_mod( 'brand_image_only' ) ? 'hide-text' : '' ?>"><?php echo $blog_name; ?></span>
               </a>
             </h1>
             <?php if( get_bloginfo('description') ): ?>

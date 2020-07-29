@@ -1,3 +1,11 @@
+body {
+  background: #FFFFFF;
+}
+
+.accent-color {
+  background-color: $teal;
+}
+
 .container {
   @include grid;
 }
@@ -52,4 +60,11 @@ hr.wp-block-separator {
 
 figcaption {
   text-align: right;
+}
+
+.hide-text {
+  position: absolute;
+  left: 0;
+  text-indent: -4000px;
+  font-size: 0;
 }

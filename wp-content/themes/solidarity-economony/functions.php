@@ -1,8 +1,9 @@
 <?php
 
 // template tags used to get content
-include('inc/template-tags.php');
+include('inc/partials.php');
 include('inc/cpt.php');
+include('inc/customizer.php');
 
 // add_editor_style('editor-style.css');
 // add_theme_support('editor-styles');
@@ -144,7 +145,19 @@ add_action('enqueue_block_editor_assets', 'be_gutenberg_scripts');
 // Enqueue Extra Styles
 function sea_enqueue_styles()
 {
-  wp_enqueue_style('google_fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900|Merriweather:300,300i,700', false, false);
+  $headings_font = esc_html(get_theme_mod('linje_headings_fonts'));
+  $body_font = esc_html(get_theme_mod('linje_body_fonts'));
+
+  if ($headings_font) {
+    wp_enqueue_style('sea-headings-fonts', '//fonts.googleapis.com/css?family=' . $headings_font);
+  } else {
+    wp_enqueue_style('sea-heading-fonts', '//fonts.googleapis.com/css?family=Lato:400,700,400i,700i,900');
+  }
+  if ($body_font) {
+    wp_enqueue_style('sea-body-fonts', '//fonts.googleapis.com/css?family=' . $body_font);
+  } else {
+    wp_enqueue_style('sea-body-fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300i,700');
+  }
 }
 add_action('oneltd_enqueue_styles', 'sea_enqueue_styles');
 

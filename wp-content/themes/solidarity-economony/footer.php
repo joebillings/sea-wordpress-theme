@@ -10,17 +10,13 @@
             <?php endwhile; ?>
           </div>
           <?php endif; ?>
-          <?php if(get_field('telephone_number', 'options')): ?>
-            <p class="no-space"><?= the_field('telephone_number', 'options'); ?></p>
-          <?php endif; ?>
-          <?php if(get_field('email_address', 'options')): ?>
-            <p class="no-space"><a href="<?= the_field('email_address', 'options'); ?>"><?= the_field('email_address', 'options'); ?></a></p>
-          <?php endif; ?>
-          <?= the_field('address', 'options'); ?>
+          <div id="footer-phone-line"><?= sea_add_footer_phone_line() ?></div>
+          <div id="footer-email-line"><?= sea_add_footer_email_line() ?></div>
+          <div id="footer-address-line"><?= sea_add_footer_address_line() ?></div>
         </div>
         <div class="footer-right">
-          <?= the_field('main_text', 'options'); ?>
-          <p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+          <div id="footer-text-block"><?= sea_add_footer_text_block() ?></div>
+          <p class="copyright">&copy; <?php echo date('Y'); ?> <span class="name"><?php bloginfo('name'); ?></span></p>
         </div>
       </div>
     </footer>
