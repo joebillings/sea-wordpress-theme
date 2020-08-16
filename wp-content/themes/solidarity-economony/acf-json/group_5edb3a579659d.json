@@ -38,6 +38,369 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5f39ab27868fc",
+            "label": "HTML Title",
+            "name": "html_title",
+            "type": "text",
+            "instructions": "If set, this will override the default value for the map's HTML &lt;title&gt; tag.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f39ab3e868fd",
+            "label": "Show Datasets Panel",
+            "name": "show_datasets_panel",
+            "type": "true_false",
+            "instructions": "If true this will load the datasets panel",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f39ab60868fe",
+            "label": "Initial Bounds",
+            "name": "initial_bounds",
+            "type": "group",
+            "instructions": "The initial bounds of the map as two sets of Lat\/Long coordinates; these are chosen automatically if this is unset",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5f39abaf868ff",
+                    "label": "Latitude 1",
+                    "name": "lat_1",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5f39ac4a86900",
+                    "label": "Longitude 1",
+                    "name": "lng_1",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5f39ac6b86901",
+                    "label": "Latitude 2",
+                    "name": "lat_2",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5f39ac7d86902",
+                    "label": "Longitude 2",
+                    "name": "lng_2",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5f39acbb86903",
+            "label": "Default Lat\/Lng",
+            "name": "default_lat_lng",
+            "type": "group",
+            "instructions": "The position on the map that an initiative's dialog is positioned if it has no resolvable geolocation, as a set of lat\/long coordinates; these are set to 0, 0 if it is unset.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5f39ad0586904",
+                    "label": "Latitude",
+                    "name": "lat",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5f39ad1486905",
+                    "label": "Longitude",
+                    "name": "lng",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "0.000000",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5f39ad4a86906",
+            "label": "Filterable Fields",
+            "name": "filterable_fields",
+            "type": "text",
+            "instructions": "Defines the fields that can populate the directory. Takes a comma-delimited list of strings. No commas can exist in the strings.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f39adaa86907",
+            "label": "Does Directory Have Colours?",
+            "name": "does_directory_have_colours",
+            "type": "true_false",
+            "instructions": "True if the directory should feature coloured entries",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f39addc86909",
+            "label": "Disable Clustering At Zoom",
+            "name": "disable_clustering_at_zoom",
+            "type": "number",
+            "instructions": "Defines the zoom level above which to cluster pins; passed to Leaflet.markercluster plugin. Zero effectively disables clustering, as this is a fully zoomed-out, global map; most maps zoom in to level 18. If omitted, clustering is always off. See: <a href=\"https:\/\/leaflet.github.io\/Leaflet.markercluster\/#other-options\">https:\/\/leaflet.github.io\/Leaflet.markercluster\/#other-options<\/a> and <a href=\"https:\/\/leafletjs.com\/examples\/zoom-levels\/\">https:\/\/leafletjs.com\/examples\/zoom-levels\/<\/a>",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 18,
+            "step": 1
+        },
+        {
+            "key": "field_5f39ae188690a",
+            "label": "Searched Fields",
+            "name": "searched_fields",
+            "type": "text",
+            "instructions": "A list of fields that are looked at when searching: name, uri, within, lat, lng, www, regorg, sameas, desc, street, locality, region, postcode, country, primaryActivity, activity, orgStructure, tel, email,qualifier",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5f39ae698690b",
+            "label": "Max Zoom On Group",
+            "name": "max_zoom_on_group",
+            "type": "number",
+            "instructions": "The maximum zoom in that can happen when selecting any particular group in directory, if 0 does no zooming. Defaults to 18 and auto decides best max zoom",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 18,
+            "step": ""
+        },
+        {
+            "key": "field_5f39aeb48690c",
+            "label": "Max Zoom On One",
+            "name": "max_zoom_on_one",
+            "type": "number",
+            "instructions": "The maximum zoom in that can happen when selecting an initiative, if 0 does no zooming. Defaults to 18 and auto decides best max zoom",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 18,
+            "step": ""
+        },
+        {
+            "key": "field_5f39aed68690d",
+            "label": "Max Zoom On Search",
+            "name": "max_zoom_on_search",
+            "type": "number",
+            "instructions": "The maximum zoom in that can happen when searching any particular group, if 0 does no zooming. Defaults to 18 and auto decides best max zoom",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 18,
+            "step": ""
+        },
+        {
+            "key": "field_5f39af098690e",
+            "label": "Logo",
+            "name": "logo",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -57,5 +420,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591529052
+    "modified": 1597618556
 }

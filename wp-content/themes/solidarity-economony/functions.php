@@ -5,9 +5,21 @@ include('inc/partials.php');
 include('inc/cpt.php');
 include('inc/customizer.php');
 
-// add_editor_style('editor-style.css');
-// add_theme_support('editor-styles');
 add_theme_support('responsive-embeds');
+add_theme_support('post-thumbnails');
+
+
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjecent_posts_rel_link', 10, 0);
+remove_action('wp_head', 'adjecent_posts_rel_link_wp_head', 10, 0);
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Register the navigation menus
 function sea_register_nav_menu()
@@ -158,18 +170,40 @@ function sea_enqueue_styles()
   } else {
     wp_enqueue_style('sea-body-fonts', '//fonts.googleapis.com/css?family=Merriweather:300,300i,700');
   }
+
+  wp_enqueue_style('sea-core-style', get_stylesheet_uri(), array(), date('Y-m-d-H:i:s', filemtime(trailingslashit(get_stylesheet_directory()) . 'style.css')));
+
+  if (file_exists(trailingslashit(get_stylesheet_directory()) . 'admin/style.css')) {
+    wp_enqueue_style('sea-admin-style', trailingslashit(get_stylesheet_directory_uri()) . 'admin/style.css', array(), date('Y-m-d-H:i:s', filemtime(trailingslashit(get_stylesheet_directory()) . 'admin/style.css')));
+  }
 }
-add_action('oneltd_enqueue_styles', 'sea_enqueue_styles');
+add_action('wp_enqueue_scripts', 'sea_enqueue_styles');
 
 // Enqueue extra scripts
 function sea_enqueue_scripts()
 {
+  _one_log(get_stylesheet_uri());
+  if (file_exists(trailingslashit(get_stylesheet_directory()) . 'admin/core.js')) {
+    wp_enqueue_script('sea-admin-scripts', get_stylesheet_directory_uri() . '/admin/core.js');
+  }
   if (get_field('font_awesome_kit', 'options')) {
     wp_register_script('fa', 'https://kit.fontawesome.com/' . get_field('font_awesome_kit', 'options') . '.js', array(), NULL, false);
     wp_enqueue_script('fa');
   }
 }
-add_action('oneltd_enqueue_scripts', 'sea_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'sea_enqueue_scripts');
+
+// Enqueue extra scripts
+function sea_admin_enqueue_scripts()
+{
+  if (file_exists(trailingslashit(get_stylesheet_directory()) . 'admin/style.css')) {
+    wp_enqueue_style('sea-admin-style', trailingslashit(get_stylesheet_directory_uri()) . 'admin/style.css', array(), date('Y-m-d-H:i:s', filemtime(trailingslashit(get_stylesheet_directory()) . 'admin/style.css')));
+  }
+  if (file_exists(trailingslashit(get_stylesheet_directory()) . 'admin/core.js')) {
+    wp_enqueue_script('sea-admin-scripts', get_stylesheet_directory_uri() . '/admin/core.js');
+  }
+}
+add_action('wp_admin_enqueue_scripts', 'sea_enqueue_scripts');
 
 if (!function_exists('_one_log')) {
   function _one_log($message)
@@ -185,26 +219,3 @@ if (!function_exists('_one_log')) {
     }
   }
 }
-
-/**
- * See documentation of base theme at
- * http://git.oneltd.co.uk/one/oneltd-base/blob/master/README.md
- *
- * The base theme does some important bits while enqueuing scripts and styles,
- * you therefore need to load your extra ones a little differently to usual.
- *
- * To enqueue styles:
- *
- * add_action('oneltd_enqueue_styles', 'SITENAME_enqueue_styles');
- * function SITENAME_enqueue_styles() {
- *   wp_enqueue_style(...);
- * }
- *
- * To enqueue scripts:
- *
- * add_action('oneltd_enqueue_scripts', 'SITENAME_enqueue_scripts');
- * function SITENAME_enqueue_scripts() {
- *   wp_register_script(...);
- *   // etc
- * }
- */
